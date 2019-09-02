@@ -1,28 +1,19 @@
 @include('layouts.header')
 <main class="main">
 	<div class="main_introduction">
-	 	<p class="main_introduction_p1">Educate»Trade»Earn</p>
+	 	<p class="main_introduction_p1">{{__('index.ETE')}}</p>
 	 	<p class="main_introduction_p2">
-	 		Bitcoin Academy was created on the basis of long-term observation of the markets,
-	 		not only financial ones, but also commodity, and last but not least – information markets.
-	 		The goal is to educate, what means that only by following our newsletter or webinar
-	 		you can gain the knowledge, which you will not be given by any school, institution or job.
+	 		{{__('index.BAdescription')}}
 	 	</p>
 	 	<br>
-	 	<a class="button-basic button-margin-eshop" href="#">EShop</a>
+	 	<a class="button-basic button-margin-eshop" href="#">{{__('index.EShop')}}</a>
  	</div>
  	<div id="about_us" class="main_bacademy">
- 		<p class="main_bacademy_p1">What is Bitcoin Academy?</p>
+ 		<p class="main_bacademy_p1">{{__('index.WhatBA')}}</p>
  		<p class="main_bacademy_p2">
- 			We introduce a new concept of MLM marketing, which is endless, what is most important – fair and 
- 			no way misleading – its transparency consists in mutual control of all the users.The principle is 
- 			rather educational, in which one can acquire basic knowledge from IT, MLM and trading management. 
- 			All of this for free, without any limits or conditions. Of course, for those who are interested 
- 			in working on themselves we have free level system but also paid program, the possibility of 
- 			handsome earnings. We do not promise, nor guarantee the earnings, everything depends on abilities 
- 			of a person and mostly on the borders of effort which one is willing to make for us.
+ 			{{__('index.WhatBAdescription')}}
  		</p>
- 		<button class="button-basic main_bacademy_button-sign-up button-padding">Sign up</button>
+ 		<button class="button-basic main_bacademy_button-sign-up button-padding">{{__('header.Sign')}}</button>
  	</div>
  	<div class="main_logo">
  		<div  class="main_logo_dark ">
@@ -41,4 +32,21 @@
  			<img class="logo-width logo-padding" src="{{'img/logo_company/airbitz.png'}}" alt="airbitz">
  		</div>
  	</div>
+ 	<div class="main-articles">
+ 		<p class="main-articles_title">{{__('index.Articles')}}</p>
+ 		<div class="main-article_quantity">
+ 			@foreach($articles as $article)
+ 				@if(str_replace('_', '-', app()->getLocale()) == $article->language)
+	 			<a href="{{ url(str_replace('_', '-', app()->getLocale()).'/article/'.$article->id)}}">
+		 			<div class="main-articles_show margin_auto">
+		 				<img width="250px" src="{{'img/'.$article->image}}" alt="{{$article->title}}">
+						<p>{{$article->title}}</p>
+						<p>{{substr($article->text, 0, 100).'...'}}</p>
+					</div>
+				</a>
+				@endif
+			@endforeach
+		</div>
+ 	</div>
 </main>
+

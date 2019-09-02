@@ -47,7 +47,6 @@ p{
 .header_language_submenu{
 	list-style-type: none;
 	display: none;
-	margin: 0 20px;
 }
 .header_topmenu > .header_language-button:hover .header_language_submenu{
 	display: block;
@@ -145,4 +144,32 @@ p{
 .logo-padding{
 	padding-left: 30px;
 }
+.main-articles{
+	text-align: center;
+}
+.main-articles_title{
+	padding: 50px 0px;
+	font-size: 35px
+}
+.main-article_quantity{
+	display: flex;
+	justify-content: center;
+	overflow-x: auto;
+	margin-bottom: 50px;
+}
+.main-articles_show{
+	width: 300px;
+	margin: 0 5%;
+}
 /*Main content end*/
+
+
+/*Main article*/
+.main_float{
+	float: right;
+}
+.main_article-text{
+	font-size: 20px;
+	padding: 20px 0px;
+}
+/*Main article end*/
