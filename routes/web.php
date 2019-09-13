@@ -14,3 +14,4 @@
 Route::get( '/', 'IndexController@index' );
 Route::get( '/{locale}', 'IndexController@lang' );
 Route::get( '/{locale}/article/{id}', 'ArticleController@index');
+?>

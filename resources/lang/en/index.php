@@ -28,7 +28,6 @@ return [
         in working on themselves we have free level system but also paid program, the possibility of 
         handsome earnings. We do not promise, nor guarantee the earnings, everything depends on abilities 
         of a person and mostly on the borders of effort which one is willing to make for us.',
-    'EShop' => 'EShop',
     'SignUp' => 'Sign up',
     'Articles' => 'Articles',
     'date' => 'Date: ',
